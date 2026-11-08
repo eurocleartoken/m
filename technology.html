@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>€Millions — Exclusive Technology | Token-2022</title>
+    <link rel="icon" href="millions_logo.png" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0A0E27; color: #E0E6FF;
+            line-height: 1.6; padding-top: 80px; padding-bottom: 60px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(10,14,39,0.92); backdrop-filter: blur(12px);
+            z-index: 100; border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 10px 0;
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 10px;
+        }
+        .logo { display: flex; align-items: center; gap: 8px; }
+        .logo img { height: 36px; width: auto; border-radius: 50%; }
+        .logo-text { font-size: 20px; font-weight: 700; color: #fff; }
+        nav { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+        nav a { color: #8A94C8; text-decoration: none; font-size: 12px; font-weight: 500; transition: 0.3s; }
+        nav a:hover { color: #FFD700; }
+        nav a.active { color: #FFD700; border-bottom: 2px solid #FFD700; }
+        .btn-primary {
+            background: linear-gradient(135deg, #FFD700, #FFA500); color: #0A0E27; padding: 6px 18px;
+            border-radius: 30px; font-weight: 700; text-decoration: none;
+            transition: 0.3s; display: inline-block; font-size: 13px;
+        }
+        .btn-primary:hover { background: linear-gradient(135deg, #FFA500, #FFD700); transform: scale(1.02); }
+        section { padding: 40px 0; }
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-tag {
+            display: inline-block; background: rgba(255, 215, 0, 0.12);
+            color: #FFD700; padding: 4px 16px; border-radius: 20px;
+            font-size: 12px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+        .section-header h1 { font-size: 36px; font-weight: 800; margin: 8px 0; }
+        .section-header h1 .highlight { color: #FFD700; }
+        .section-header p { color: #8A94C8; max-width: 600px; margin: 0 auto; }
+        
+        /* ===== НОВЫЙ ДИЗАЙН БЛОКОВ ТЕХНОЛОГИЙ ===== */
+        .tech-detail-block {
+            display: flex; align-items: center; gap: 40px;
+            background: linear-gradient(180deg, rgba(26, 30, 65, 0.6) 0%, rgba(10, 14, 39, 0.6) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 24px; padding: 40px; margin-bottom: 30px;
+            transition: 0.4s;
+        }
+        .tech-detail-block:hover { border-color: #FFD700; box-shadow: 0 0 40px rgba(255,215,0,0.1); }
+        .tech-detail-block:nth-child(even) { flex-direction: row-reverse; }
+        
+        .tech-img-container {
+            flex: 0 0 200px; text-align: center;
+        }
+        .tech-img-container img {
+            width: 180px; height: 180px; object-fit: contain;
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+            animation: floatImg 6s ease-in-out infinite;
+        }
+        @keyframes floatImg {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .tech-text { flex: 1; }
+        .tech-text h2 { font-size: 28px; color: #fff; margin-bottom: 12px; }
+        .tech-text h2 .highlight { color: #FFD700; }
+        .tech-text p { color: #8A94C8; font-size: 16px; margin-bottom: 20px; }
+        .tech-features {
+            list-style: none; padding: 0;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+        }
+        .tech-features li {
+            font-size: 14px; color: #E0E6FF;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .tech-features li::before {
+            content: '✔'; color: #FFD700; font-weight: bold;
+        }
+
+        .contract-box {
+            background: rgba(255, 215, 0, 0.05); border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 12px; padding: 14px 16px; margin: 20px 0;
+            text-align: center; font-size: 13px; color: #8A94C8; font-family: 'Courier New', monospace;
+        }
+        .contract-box .addr { color: #FFD700; }
+        .contract-box .copy-btn { background: transparent; border: none; color: #5A649A; cursor: pointer; font-size: 13px; font-family: 'Segoe UI', sans-serif; }
+        .contract-box .copy-btn:hover { color: #FFD700; }
+        .contract-box .solscan-link { color: #5A649A; text-decoration: none; font-size: 13px; font-family: 'Segoe UI', sans-serif; margin-left: 8px; }
+        .contract-box .solscan-link:hover { color: #fff; }
+        
+        .back-link { display: inline-block; margin-top: 16px; color: #FFD700; text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+        footer {
+            background: #060920; padding: 20px 0 16px; text-align: center;
+            border-top: 1px solid #1E2350; margin-top: 20px;
+        }
+        footer p { color: #3A406A; font-size: 13px; }
+        
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; align-items: stretch; }
+            nav { justify-content: center; gap: 6px; }
+            nav a { font-size: 10px; }
+            .section-header h1 { font-size: 26px; }
+            .tech-detail-block { flex-direction: column; text-align: center; padding: 24px; }
+            .tech-detail-block:nth-child(even) { flex-direction: column; }
+            .tech-features { grid-template-columns: 1fr; text-align: left; }
+            .contract-box { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <img src="millions_logo.png" alt="€Millions" />
+            <span class="logo-text">€MILLIONS</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="buy.html">Buy</a>
+            <a href="trade.html">Trade</a>
+            <a href="technology.html" class="active">Technology</a>
+            <a href="fintech1.html">Use Cases</a>
+            <a href="fintech2.html">RWA</a>
+            <a href="ecosystem.html">Ecosystem</a>
+        </nav>
+        <a href="buy.html" class="btn-primary">Buy €M</a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Token-2022 Innovations</span>
+            <h1>Exclusive <span class="highlight">Technology</span></h1>
+            <p>€Millions is not just a token. It's a technological breakthrough built on Solana's Token-2022 standard, featuring tools not available in any other token of the 123 ecosystem.</p>
+        </div>
+
+        <!-- ФИЧА 1: ZK-COMPLIANCE -->
+        <div class="tech-detail-block">
+            <div class="tech-img-container">
+                <img src="millions_zk_shield.png" alt="ZK-Compliance" onerror="this.src='millions_logo.png'" />
+            </div>
+            <div class="tech-text">
+                <h2>ZK-Compliance <span class="highlight">Privacy</span></h2>
+                <p>
+                    Traditional tokens are fully transparent, which is a problem for institutional investors. €M uses Zero-Knowledge proofs to enable <strong>confidential transfers</strong>. You can move millions without exposing your balance to the public, while still remaining fully compliant with SEPA and SWIFT regulations.
+                </p>
+                <ul class="tech-features">
+                    <li>Confidential Transfers</li>
+                    <li>SEPA / SWIFT Compatible</li>
+                    <li>Institutional Privacy</li>
+                    <li>Anti-Money Laundering (AML) Hooks</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ФИЧА 2: SMART FEES -->
+        <div class="tech-detail-block">
+            <div class="tech-img-container">
+                <img src="millions_smart_fees.png" alt="Smart Fees" onerror="this.src='millions_logo.png'" />
+            </div>
+            <div class="tech-text">
+                <h2>Smart Transfer <span class="highlight">Fees</span></h2>
+                <p>
+                    Every transaction on the €M network automatically triggers a <strong>1% Smart Fee</strong>. This fee is not kept by a central team; it is split by the smart contract to ensure the long-term growth of the token.
+                </p>
+                <ul class="tech-features">
+                    <li>40% to Meteora Liquidity</li>
+                    <li>40% Buyback & Burn (Deflationary)</li>
+                    <li>20% to 123 Ecosystem Treasury</li>
+                    <li>Fully Automated by Token-2022</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ФИЧА 3: AI TREASURY -->
+        <div class="tech-detail-block">
+            <div class="tech-img-container">
+                <img src="millions_ai_brain.png" alt="AI Treasury" onerror="this.src='millions_logo.png'" />
+            </div>
+            <div class="tech-text">
+                <h2>AI-Powered <span class="highlight">Treasury</span></h2>
+                <p>
+                    We don't rely on manual management. Our custom AI agent constantly monitors the liquidity pools on Meteora and Jupiter. If it detects a drop in yield or a shift in market volatility, it automatically rebalances the treasury to protect the token's value.
+                </p>
+                <ul class="tech-features">
+                    <li>Real-time Yield Monitoring</li>
+                    <li>Automated Rebalancing</li>
+                    <li>Risk Mitigation Algorithms</li>
+                    <li>Institutional Asset Management</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contract-box">
+            📜 Contract: <span class="addr">6o1kEJAKkJnhdMqcsNaPHLAgpbNyac89BN4RDNgRHgeV</span>
+            <button onclick="navigator.clipboard.writeText('6o1kEJAKkJnhdMqcsNaPHLAgpbNyac89BN4RDNgRHgeV')" class="copy-btn">📋 Copy</button>
+            <a href="https://solscan.io/token/6o1kEJAKkJnhdMqcsNaPHLAgpbNyac89BN4RDNgRHgeV" target="_blank" class="solscan-link">🔍 Solscan</a>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to €Millions Home</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2026 One•Two•Three. Built on Solana. | Contract: 6o1kEJAKkJnhdMqcsNaPHLAgpbNyac89BN4RDNgRHgeV</p>
+    </div>
+</footer>
+
+<script src="counter.js"></script>
+
+</body>
+</html>
