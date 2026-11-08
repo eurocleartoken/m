@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>€Millions (€M) — The European Dream | Token-2022</title>
-    <meta name="description" content="€Millions (€M) — 50-euro token on Solana. Powered by Token-2022. Target: ×100." />
+    <meta name="description" content="€Millions (€M) — flagship token on Solana. Powered by Token-2022. Target: ×100." />
     <link rel="icon" href="millions_logo.png" />
     <style>
-        /* ===== ОБЩИЕ СТИЛИ ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
@@ -17,7 +16,6 @@
         }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ===== ТИКЕРЫ ===== */
         .ticker {
             position: fixed; left: 0; width: 100%; z-index: 1000;
             background: rgba(10, 14, 39, 0.95);
@@ -43,7 +41,6 @@
         @keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .ticker-bottom .ticker-track { animation-duration: 38s; }
 
-        /* ===== ШАПКА ===== */
         header {
             position: fixed; top: 36px; left: 0; width: 100%;
             background: rgba(10, 14, 39, 0.92); backdrop-filter: blur(12px);
@@ -107,11 +104,10 @@
         }
         .btn-glass:hover { background: rgba(255, 215, 0, 0.2); border-color: #FFD700; }
 
-        /* ===== HERO (Glassmorphism) ===== */
         .hero {
             padding: 20px 0 40px; position: relative; z-index: 1;
             min-height: 70vh; display: flex; align-items: center;
-            background-image: url('millions_hero_luxury.jpg');
+            background-image: url('millions_hero_luxury.png');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         .hero::before {
@@ -122,7 +118,7 @@
         .hero-inner { display: flex; align-items: center; gap: 40px; position: relative; z-index: 1; }
         .hero-content {
             flex: 1;
-            background: rgba(26, 30, 65, 0.4); /* Стеклянная карточка для текста */
+            background: rgba(26, 30, 65, 0.4);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255,255,255,0.05);
             border-radius: 24px;
@@ -180,7 +176,6 @@
             50% { transform: translateY(-15px) rotate(5deg); }
         }
 
-        /* ===== СЕКЦИИ ===== */
         section { padding: 60px 0; position: relative; z-index: 1; }
         .section-header { text-align: center; margin-bottom: 40px; }
         .section-tag {
@@ -201,7 +196,6 @@
         }
         .glass-card:hover { border-color: rgba(255,215,0,0.3); transform: translateY(-4px); box-shadow: 0 15px 40px rgba(255,215,0,0.1); }
 
-        /* ===== ТЕХНОЛОГИИ (НОВЫЙ БЛОК) ===== */
         .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
         .tech-card {
             background: linear-gradient(180deg, rgba(26, 30, 65, 0.8) 0%, rgba(10, 14, 39, 0.8) 100%);
@@ -215,7 +209,6 @@
         .tech-card p { color: #8A94C8; font-size: 14px; margin-bottom: 16px; flex-grow: 1; }
         .tech-tag { font-size: 11px; color: #FFD700; text-transform: uppercase; font-weight: 600; border: 1px solid rgba(255,215,0,0.3); padding: 2px 8px; border-radius: 10px; align-self: flex-start; }
 
-        /* ===== БЫСТРАЯ ПОКУПКА ===== */
         .quick-buy {
             max-width: 700px; margin: 0 auto 30px;
             background: rgba(26, 30, 65, 0.5); border: 1px solid #1E2350;
@@ -258,7 +251,16 @@
         .buy-links-grid a:hover { border-color: #FFD700; color: #FFD700; background: rgba(255, 215, 0, 0.05); }
         .buy-links-grid a .icon { display: block; font-size: 18px; margin-bottom: 2px; }
 
-        /* ===== ПОДВАЛ ===== */
+        .rwa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+        .rwa-card {
+            background: rgba(26,30,65,0.4); border: 1px solid #1E2350;
+            border-radius: 16px; padding: 20px 18px; text-align: center; transition: 0.3s;
+        }
+        .rwa-card:hover { border-color: #FFD700; transform: translateY(-4px); }
+        .rwa-card .rwa-icon { font-size: 28px; margin-bottom: 6px; }
+        .rwa-card h4 { color: #fff; font-size: 15px; }
+        .rwa-card p { color: #8A94C8; font-size: 12px; margin-top: 4px; }
+
         footer {
             background: #060920; padding: 30px 0 16px; position: relative; z-index: 1;
             border-top: 1px solid #1E2350; margin-bottom: 40px;
@@ -336,7 +338,6 @@
 </head>
 <body>
 
-<!-- ТИКЕР 1 -->
 <div class="ticker ticker-top">
     <div class="ticker-track">
         <span>👑 <span class="highlight-ticker">€Millions (€M)</span> — The European Dream • Token-2022</span>
@@ -354,7 +355,6 @@
     </div>
 </div>
 
-<!-- ШАПКА -->
 <header>
     <div class="container header-inner">
         <div class="logo">
@@ -372,15 +372,12 @@
             <a href="buy.html">Buy</a>
             <a href="trade.html">Trade</a>
             <a href="technology.html">Technology</a>
-            <a href="fintech1.html">Use Cases</a>
-            <a href="fintech2.html">RWA</a>
             <a href="ecosystem.html">Ecosystem</a>
         </nav>
         <a href="buy.html" class="btn-primary">Buy €M</a>
     </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div class="container hero-inner">
         <div class="hero-content">
@@ -413,7 +410,6 @@
     </div>
 </section>
 
-<!-- ТЕХНОЛОГИИ (НАШИ НОУ-ХАУ) -->
 <section id="technology">
     <div class="container">
         <div class="section-header">
@@ -440,17 +436,10 @@
                 <p>Our AI agent monitors liquidity and automatically rebalances between pools to maximize yields. Institutional-grade asset management.</p>
                 <span class="tech-tag">AI Agent</span>
             </div>
-            <div class="tech-card">
-                <div class="tech-icon">🔄</div>
-                <h3>Dynamic Yield Routing</h3>
-                <p>The smart contract automatically routes liquidity to the highest-yield pool (Meteora DAMM V2 or Jupiter). Always optimized.</p>
-                <span class="tech-tag">Auto-Routing</span>
-            </div>
         </div>
     </div>
 </section>
 
-<!-- БЫСТРАЯ ПОКУПКА -->
 <section id="buy">
     <div class="container">
         <div class="quick-buy glass-card">
@@ -481,7 +470,6 @@
     </div>
 </section>
 
-<!-- О ТОКЕНЕ -->
 <section id="about">
     <div class="container">
         <div class="section-header">
@@ -498,7 +486,6 @@
     </div>
 </section>
 
-<!-- ТИКЕР 2 -->
 <div class="ticker ticker-bottom">
     <div class="ticker-track">
         <span>👑 <span class="highlight-ticker">€M = €0.01</span> • ×100 to €1.00</span>
@@ -518,7 +505,6 @@
     </div>
 </div>
 
-<!-- ПОДВАЛ -->
 <footer>
     <div class="container footer-inner">
         <div class="footer-brand">
