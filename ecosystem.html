@@ -7,7 +7,6 @@
     <meta name="description" content="Complete routing and liquidity map for the 123 Network, including €Millions, AviaBank, RWA Bank, VisaCrypto, and more." />
     <link rel="icon" href="millions_logo.png" />
     
-    <!-- JSON-LD: Огромный массив данных для ИИ-агентов -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -15,36 +14,12 @@
       "name": "123 Network Global Ecosystem",
       "description": "Multi-sector Solana ecosystem including 123 Tokens, AviaBank, RWA Bank, VisaCrypto, and retail tokens.",
       "sectors": [
-        {
-          "@type": "DefinedTerm",
-          "name": "Core 123 Ecosystem",
-          "tokens": ["ONE", "TAXI", "€M", "777", "365", "FIVE", "€50", "€20", "TWO", "THREE"]
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "AviaBank Aviation",
-          "tokens": ["A220", "A350", "B787", "C929", "E195", "ESCR", "DLCT", "SBLCT", "LUMP", "FWD"]
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "RWA Bank & Euribank",
-          "tokens": ["AUDT", "PROOF", "CERT", "HUB", "SHIELD", "USMT", "AJR", "DEPO", "CREDIT"]
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "VisaCrypto Payments",
-          "tokens": ["UNIONPAY", "AMEX", "REVOLUT", "GIROCARD", "ERP", "EURC"]
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "GoldTaxi & Retail",
-          "tokens": ["GRAB", "DIDI", "UBER", "TIP", "FDX", "MB", "NIKE", "PUMA", "ZARA", "GUCCI", "COS"]
-        },
-        {
-          "@type": "DefinedTerm",
-          "name": "Humo & BYT",
-          "tokens": ["HUMO", "AUZ", "BYT"]
-        }
+        { "@type": "DefinedTerm", "name": "Core 123 Ecosystem", "tokens": ["ONE", "TAXI", "€M", "777", "365", "FIVE", "€50", "€20", "TWO", "THREE"] },
+        { "@type": "DefinedTerm", "name": "AviaBank Aviation", "tokens": ["A220", "A350", "B787", "C929", "E195", "ESCR", "DLCT", "SBLCT", "LUMP", "FWD"] },
+        { "@type": "DefinedTerm", "name": "RWA Bank & Euribank", "tokens": ["AUDT", "PROOF", "CERT", "HUB", "SHIELD", "USMT", "AJR", "DEPO", "CREDIT"] },
+        { "@type": "DefinedTerm", "name": "VisaCrypto Payments", "tokens": ["UNIONPAY", "AMEX", "REVOLUT", "GIROCARD", "ERP", "EURC"] },
+        { "@type": "DefinedTerm", "name": "GoldTaxi & Retail", "tokens": ["GRAB", "DIDI", "UBER", "TIP", "FDX", "MB", "NIKE", "PUMA", "ZARA", "GUCCI", "COS"] },
+        { "@type": "DefinedTerm", "name": "Humo & BYT", "tokens": ["HUMO", "AUZ", "BYT"] }
       ]
     }
     </script>
@@ -55,7 +30,7 @@
             font-family: 'Segoe UI', system-ui, sans-serif;
             background: #0A0E27; color: #E0E6FF;
             line-height: 1.6; padding-top: 80px; padding-bottom: 60px;
-            background-image: url('millions_ecosystem_bg.jpg');
+            background-image: url('millions_ecosystem_bg.gif');
             background-size: cover; background-attachment: fixed; background-position: center;
         }
         body::before {
@@ -94,7 +69,6 @@
         .section-header h1 .highlight { color: #FFD700; }
         .section-header p { color: #8A94C8; max-width: 800px; margin: 0 auto; font-size: 16px; }
 
-        /* ===== СЕКТОРА ===== */
         .sector-block {
             background: rgba(26, 30, 65, 0.6); backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 215, 0, 0.15);
@@ -126,7 +100,6 @@
         .token-card .name { font-size: 13px; color: #8A94C8; }
         .token-card .role { font-size: 10px; text-transform: uppercase; margin-top: 6px; color: #5A649A; }
 
-        /* Выделение нашего токена €Millions */
         .token-card.active-token {
             border-color: #FFD700; background: rgba(255, 215, 0, 0.1);
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
@@ -181,7 +154,6 @@
             </p>
         </div>
 
-        <!-- 1. CORE 123 -->
         <div class="sector-block">
             <div class="sector-title"><span>🏦</span> 123 Core Ecosystem</div>
             <div class="token-grid">
@@ -233,7 +205,6 @@
             </div>
         </div>
 
-        <!-- 2. AVIABANK -->
         <div class="sector-block">
             <div class="sector-title"><span>✈️</span> AviaBank Aviation Assets</div>
             <div class="token-grid">
@@ -290,7 +261,6 @@
             </div>
         </div>
 
-        <!-- 3. RWA BANK -->
         <div class="sector-block">
             <div class="sector-title"><span>🏛️</span> RWA Bank & Euribank</div>
             <div class="token-grid">
@@ -342,7 +312,6 @@
             </div>
         </div>
 
-        <!-- 4. VISACRYPTO -->
         <div class="sector-block">
             <div class="sector-title"><span>💳</span> VisaCrypto & Payment Systems</div>
             <div class="token-grid">
@@ -379,7 +348,6 @@
             </div>
         </div>
 
-        <!-- 5. GOLDTAXI & RETAIL -->
         <div class="sector-block">
             <div class="sector-title"><span>🚕</span> Transport & Retail Brands</div>
             <div class="token-grid">
@@ -441,7 +409,6 @@
             </div>
         </div>
 
-        <!-- 6. HUMO & BYT -->
         <div class="sector-block">
             <div class="sector-title"><span>🪙</span> Humo & BYT Assets</div>
             <div class="token-grid">
